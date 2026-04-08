@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#fff7f6",
+                    "tertiary-fixed-dim": "#edeca8",
+                    "surface-container-low": "#ecf6ed",
+                    "inverse-primary": "#c9fecd",
+                    "secondary": "#3e6a25",
+                    "secondary-container": "#bdf19c",
+                    "inverse-surface": "#09100c",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#bcefc0",
+                    "primary-dim": "#2f5d38",
+                    "on-surface-variant": "#546259",
+                    "primary-fixed-dim": "#aee1b2",
+                    "outline-variant": "#a6b6ab",
+                    "on-primary-fixed": "#1a4826",
+                    "error": "#a73b21",
+                    "background": "#f4fbf4",
+                    "tertiary-container": "#fbfab5",
+                    "primary-fixed": "#bcefc0",
+                    "error-dim": "#791903",
+                    "tertiary": "#62622c",
+                    "surface-container-highest": "#d6e6db",
+                    "on-background": "#28352e",
+                    "secondary-dim": "#325d1a",
+                    "outline": "#6f7e75",
+                    "tertiary-dim": "#555621",
+                    "surface-tint": "#3b6944",
+                    "primary": "#3b6944",
+                    "tertiary-fixed": "#fbfab5",
+                    "on-primary-fixed-variant": "#376540",
+                    "on-primary": "#e9ffe7",
+                    "on-tertiary-container": "#60602a",
+                    "surface-variant": "#d6e6db",
+                    "surface-bright": "#f4fbf4",
+                    "surface-container-high": "#deece1",
+                    "secondary-fixed": "#bdf19c",
+                    "surface-dim": "#ceded2",
+                    "on-secondary-container": "#315c18",
+                    "secondary-fixed-dim": "#b0e38f",
+                    "on-secondary-fixed": "#1f4905",
+                    "on-tertiary-fixed": "#4d4e1a",
+                    "error-container": "#fd795a",
+                    "on-secondary": "#ecffdb",
+                    "on-tertiary-fixed-variant": "#6a6b34",
+                    "on-secondary-fixed-variant": "#3a6622",
+                    "on-primary-container": "#2d5b37",
+                    "surface-container": "#e5f1e7",
+                    "inverse-on-surface": "#979f99",
+                    "on-tertiary": "#fefdb8",
+                    "on-error-container": "#6e1400",
+                    "on-surface": "#28352e",
+                    "surface": "#f4fbf4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f4fbf4;
+        }
+        h1, h2, h3, .brand-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-sm shadow-emerald-900/5">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold text-emerald-900 dark:text-emerald-50">AI Plant Doctor</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 font-['Plus_Jakarta_Sans'] font-medium text-sm transition-colors active:scale-95 duration-200" href="#">Home</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 font-['Plus_Jakarta_Sans'] font-medium text-sm transition-colors active:scale-95 duration-200" href="#">History</a>
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-600 font-bold pb-1 font-['Plus_Jakarta_Sans'] text-sm transition-colors active:scale-95 duration-200" href="#">Settings</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 font-['Plus_Jakarta_Sans'] font-medium text-sm transition-colors active:scale-95 duration-200" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-emerald-100/50 dark:hover:bg-emerald-800/50 transition-colors active:scale-95 duration-200 text-emerald-800 dark:text-emerald-100">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow pt-24 pb-12 px-4">
+<div class="max-w-3xl mx-auto">
+<!-- Page Header -->
+<div class="mb-10 text-right">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">الإعدادات</h1>
+<p class="text-on-surface-variant">قم بتخصيص تجربتك في العناية بالنباتات وتحكم في تفضيلات النظام</p>
+</div>
+<div class="space-y-6">
+<!-- Account Section -->
+<section class="bg-surface-container-low rounded-xl p-8 transition-all">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="person">person</span>
+</div>
+<div>
+<h2 class="text-xl font-bold text-on-surface">الحساب الشخصي</h2>
+<p class="text-sm text-on-surface-variant">إدارة معلوماتك الشخصية وصورة الملف</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant mr-1">الاسم الكامل</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary transition-all" type="text" value="أحمد العتيبي"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant mr-1">البريد الإلكتروني</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary transition-all" type="email" value="ahmed@botanical.sa"/>
+</div>
+</div>
+</section>
+<!-- Preferences Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- App Preferences -->
+<div class="bg-surface-container-low rounded-xl p-8">
+<h3 class="text-lg font-bold text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="settings_suggest">settings_suggest</span>
+                            تفضيلات التطبيق
+                        </h3>
+<div class="space-y-6">
+<!-- Toggle: Dark Mode -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-on-surface">الوضع الليلي</span>
+<span class="text-xs text-on-surface-variant">تبديل مظهر الواجهة</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle: Notifications -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-on-surface">التنبيهات</span>
+<span class="text-xs text-on-surface-variant">تذكيرات العناية بالنباتات</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- AI & Model Settings -->
+<div class="bg-surface-container-low rounded-xl p-8">
+<h3 class="text-lg font-bold text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+                            إعدادات الذكاء الاصطناعي
+                        </h3>
+<div class="space-y-6">
+<!-- Toggle: Local Model -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-on-surface">النموذج المحلي</span>
+<span class="text-xs text-on-surface-variant">معالجة البيانات على الجهاز</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-on-surface">دقة التشخيص</span>
+<span class="text-xs text-on-surface-variant">توازن بين السرعة والدقة</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-full">عالية</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Data & Storage Card (Asymmetric Layout Element) -->
+<section class="bg-surface-container-highest rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
+<div class="flex-1 z-10">
+<h2 class="text-xl font-bold text-on-surface mb-3">إدارة البيانات والمساحة</h2>
+<p class="text-on-surface-variant text-sm mb-6 max-w-md">النماذج المخزنة محلياً تستهلك 240 ميجابايت من مساحة جهازك. يمكنك حذفها لتحرير المساحة في أي وقت.</p>
+<div class="flex flex-wrap gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-primary/10 transition-all active:scale-95">تحديث النماذج</button>
+<button class="bg-surface-container-lowest text-error px-6 py-2 rounded-full text-sm font-bold border border-error/10 hover:bg-error/5 transition-all">مسح البيانات</button>
+</div>
+</div>
+<div class="hidden md:block w-48 h-48 rounded-2xl overflow-hidden shadow-xl transform rotate-3">
+<img class="w-full h-full object-cover" data-alt="lush green leaves of a tropical plant with soft sunlight filtering through, high editorial botanical photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLCtdtTwTd26n0f9rrw8y5hBs0yKKuqGEqLUAcNSCryS6qkMp5345Qbps-0hlG6SsFwygBoc_ZrTF85f52pV5YrkpDBAc5hRL0HSoMOwBjLVsIK3It_0bHrwOoLVLLAD0gYW0v2_qu2bhyBe_YRIGQxPO_Z3fRnDEvpbcYiu0wOcK-7i9efYYq3BZKRioYKPMcrbc_fq6azv-2K6hR7sd-OT8Gyogxhyge5H_4ts_QJHCbVOk_Q8D9nTzTqHCgDOf_RRDi7KqVtE"/>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-auto bg-emerald-100/30 dark:bg-emerald-950/20">
+<div class="flex flex-row-reverse justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-end gap-2">
+<span class="text-lg font-bold text-emerald-900">AI Plant Doctor</span>
+<p class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50">© 2024 The Botanical Atelier. AI Diagnostic Precision.</p>
+</div>
+<div class="flex gap-6">
+<a class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all" href="#">Privacy</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all" href="#">Terms</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all" href="#">Support</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
