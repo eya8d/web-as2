@@ -1,0 +1,144 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>المشغل النباتي - تسجيل الدخول</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b6944",
+              "primary-dim": "#2f5d38",
+              "primary-container": "#bcefc0",
+              "on-primary-container": "#2d5b37",
+              surface: "#f4fbf4",
+              "surface-container-low": "#ecf6ed",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#d6e6db",
+              "on-surface": "#28352e",
+              "on-surface-variant": "#546259",
+              outline: "#6f7e75",
+              "outline-variant": "#a6b6ab",
+              "on-primary": "#e9ffe7",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col selection:bg-primary-container">
+    <main class="flex-grow flex items-center justify-center p-4 md:p-8">
+      <div
+        class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 bg-surface-container-low rounded-xl overflow-hidden shadow-sm"
+      >
+        <div class="hidden md:block relative overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?q=80&w=1974&auto=format&fit=crop"
+            alt="plants"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-12 text-on-primary"
+          >
+            <h2 class="text-4xl font-extrabold mb-4 leading-tight">
+              اهلاً بك في <br />المشغل النباتي
+            </h2>
+            <p class="text-lg opacity-90">
+              ذكاء اصطناعي متخصص في رعاية نباتاتك المنزلية.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="p-8 md:p-16 flex flex-col justify-center bg-surface-container-lowest"
+        >
+          <div class="mb-10 text-center md:text-right">
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-container text-on-primary-container mb-6"
+            >
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >eco</span
+              >
+            </div>
+            <h1 class="text-3xl font-bold text-on-surface mb-2">
+              تسجيل الدخول
+            </h1>
+            <p class="text-on-surface-variant">
+              مرحباً بك مجدداً في AI Plant Doctor
+            </p>
+          </div>
+
+          <form class="space-y-6">
+            <div class="space-y-2">
+              <label
+                class="block text-sm font-medium text-on-surface-variant"
+                for="email"
+                >البريد الإلكتروني</label
+              >
+              <input
+                class="w-full px-4 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface"
+                id="email"
+                type="email"
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <label
+                  class="block text-sm font-medium text-on-surface-variant"
+                  for="password"
+                  >كلمة المرور</label
+                >
+                <a
+                  class="text-xs text-primary font-semibold hover:underline"
+                  href="#"
+                  >نسيت كلمة المرور؟</a
+                >
+              </div>
+              <div class="relative">
+                <input
+                  class="w-full px-4 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface"
+                  id="password"
+                  type="password"
+                  placeholder="••••••••"
+                />
+              </div>
+            </div>
+
+            <button
+              class="w-full py-4 rounded-full bg-primary text-white font-bold shadow-md hover:bg-primary-dim transition-all"
+              type="submit"
+            >
+              تسجيل الدخول
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="w-full bg-emerald-100/30 p-8 text-center text-xs text-emerald-800"
+    >
+      <p>© 2026 The Botanical Atelier. AI Diagnostic Precision.</p>
+    </footer>
+  </body>
+</html>

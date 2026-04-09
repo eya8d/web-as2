@@ -1,0 +1,39 @@
+/* Custom Typography and Global Styles */
+body {
+    font-family: 'Plus Jakarta Sans', 'Noto Kufi Arabic', sans-serif;
+    background-color: #F8FAF7;
+    /* Very light herbal background */
+}
+
+h1,
+h2,
+h3 {
+    color: #2D5A27;
+}
+
+/* Layout Refinements and Cards */
+.herbarium-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(45, 90, 39, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.herbarium-card:hover {
+    transform: translateY(-4px);
+}
+
+/* CTA Buttons Styling */
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 10px 15px -3px rgba(45, 90, 39, 0.2);
+}
+
+/* Input Focus Reset */
+input:focus {
+    outline: none !important;
+}

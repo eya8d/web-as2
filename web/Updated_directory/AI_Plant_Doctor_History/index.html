@@ -1,0 +1,435 @@
+<!doctype html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-dim": "#325d1a",
+              surface: "#f4fbf4",
+              "on-primary-container": "#2d5b37",
+              "primary-fixed-dim": "#aee1b2",
+              secondary: "#3e6a25",
+              "on-primary": "#e9ffe7",
+              error: "#a73b21",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#546259",
+              "inverse-on-surface": "#979f99",
+              "tertiary-fixed-dim": "#edeca8",
+              "primary-fixed": "#bcefc0",
+              "tertiary-dim": "#555621",
+              "on-tertiary-container": "#60602a",
+              "surface-tint": "#3b6944",
+              "on-secondary-container": "#315c18",
+              "on-primary-fixed-variant": "#376540",
+              "secondary-fixed": "#bdf19c",
+              "surface-variant": "#d6e6db",
+              "primary-container": "#bcefc0",
+              "on-secondary": "#ecffdb",
+              "error-container": "#fd795a",
+              "inverse-primary": "#c9fecd",
+              "surface-container-high": "#deece1",
+              "outline-variant": "#a6b6ab",
+              "surface-container-low": "#ecf6ed",
+              "surface-bright": "#f4fbf4",
+              "error-dim": "#791903",
+              tertiary: "#62622c",
+              "on-tertiary-fixed-variant": "#6a6b34",
+              "on-secondary-fixed-variant": "#3a6622",
+              "on-error": "#fff7f6",
+              "inverse-surface": "#09100c",
+              "surface-dim": "#ceded2",
+              "surface-container-highest": "#d6e6db",
+              "on-primary-fixed": "#1a4826",
+              outline: "#6f7e75",
+              "on-error-container": "#6e1400",
+              "tertiary-container": "#fbfab5",
+              "on-tertiary-fixed": "#4d4e1a",
+              "on-surface": "#28352e",
+              "secondary-container": "#bdf19c",
+              "tertiary-fixed": "#fbfab5",
+              "on-secondary-fixed": "#1f4905",
+              "on-tertiary": "#fefdb8",
+              background: "#f4fbf4",
+              primary: "#3b6944",
+              "on-background": "#28352e",
+              "secondary-fixed-dim": "#b0e38f",
+              "primary-dim": "#2f5d38",
+              "surface-container": "#e5f1e7",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Plus Jakarta Sans"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface text-on-surface min-h-screen flex flex-col">
+    <header
+      class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-sm shadow-emerald-900/5"
+    >
+      <div
+        class="flex flex-row-reverse justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto"
+      >
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2">
+            <span
+              class="material-symbols-outlined text-primary text-2xl"
+              data-icon="energy_savings_leaf"
+              >energy_savings_leaf</span
+            >
+            <span
+              class="text-xl font-bold text-emerald-900 dark:text-emerald-50"
+              >AI Plant Doctor</span
+            >
+          </div>
+        </div>
+        <nav
+          class="hidden md:flex flex-row gap-8 font-['Plus_Jakarta_Sans'] font-medium text-sm"
+        >
+          <a
+            class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 transition-colors active:scale-95 duration-200"
+            href="../AI_Plant_Doctor_Home/index.html"
+            >Home</a
+          >
+          <a
+            class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-600 font-bold pb-1 transition-colors active:scale-95 duration-200"
+            href="../AI_Plant_Doctor_History/index.html"
+            >History</a
+          >
+          <a
+            class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 transition-colors active:scale-95 duration-200"
+            href="../AI_Plant_Doctor_Settings/index.html"
+            >Settings</a
+          >
+          <a
+            class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-800 transition-colors active:scale-95 duration-200"
+            href="../AI_Plant_Doctor_Login/index.html"
+            >Login</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="p-2 hover:bg-emerald-100/50 dark:hover:bg-emerald-800/50 transition-colors rounded-full text-emerald-800"
+          >
+            <span class="material-symbols-outlined" data-icon="account_circle"
+              >account_circle</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto w-full flex-grow">
+      <section class="mb-12">
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4 mr-2 md:mr-6"
+        >
+          سجل التشخيصات
+        </h1>
+        <p class="text-on-surface-variant text-lg max-w-2xl mr-2 md:mr-6">
+          تتبع رحلة نمو نباتاتك وصحتها من خلال أرشيف ذكائنا الاصطناعي المتطور.
+        </p>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-10">
+        <div
+          class="md:col-span-6 lg:col-span-7 bg-surface-container-low rounded-xl p-2 flex items-center gap-3"
+        >
+          <span
+            class="material-symbols-outlined text-outline pr-3"
+            data-icon="search"
+            >search</span
+          >
+          <input
+            class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline-variant font-medium"
+            placeholder="البحث عن نبات أو مرض..."
+            type="text"
+          />
+        </div>
+        <div
+          class="md:col-span-3 lg:col-span-2 bg-surface-container-low rounded-xl p-2 flex items-center"
+        >
+          <span
+            class="material-symbols-outlined text-outline px-2"
+            data-icon="calendar_month"
+            >calendar_month</span
+          >
+          <select
+            class="bg-transparent border-none focus:ring-0 w-full text-on-surface text-sm appearance-none cursor-pointer"
+          >
+            <option>جميع الأوقات</option>
+            <option>الأسبوع الماضي</option>
+            <option>الشهر الماضي</option>
+          </select>
+        </div>
+        <div
+          class="md:col-span-3 lg:col-span-3 bg-surface-container-low rounded-xl p-2 flex items-center"
+        >
+          <span
+            class="material-symbols-outlined text-outline px-2"
+            data-icon="filter_list"
+            >filter_list</span
+          >
+          <select
+            class="bg-transparent border-none focus:ring-0 w-full text-on-surface text-sm appearance-none cursor-pointer"
+          >
+            <option>الحالة: الكل</option>
+            <option>سليم</option>
+            <option>يحتاج اهتمام</option>
+            <option>في خطر</option>
+          </select>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article
+          class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="close up of a vibrant green monstera deliciosa leaf with natural sunlight and soft shadows in a home setting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNx33Fn03sGb4inCyCsOhjfL81avKr9dAin_zhoteDRtmRXkARxMctS7MZHutjMQJF77I-8yn1dZLBaLA4UGPh3Om49GiBURcMexMdmKZyH1Ok5rI6piJBpvGsivoz8vq2lOdwbXy6XEmApE5cwJ2PiAkcp773u-kh7eGtXmu0-zUjdd5vGvpqAWP2IU33ejm-VaKUj5bl13-xGascv1g5UAAVrjBHLDurGK7NZ0MFtlqP2IRnzU2QlpfWomGICk5VYKlTDNXb9-k"
+            />
+            <div class="absolute top-4 left-4">
+              <span
+                class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span
+                  class="material-symbols-outlined text-xs"
+                  data-icon="check_circle"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >check_circle</span
+                >
+                سليم
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-on-surface">
+                مونستيرا ديليسيوسا
+              </h3>
+              <span class="text-xs text-outline font-medium">12 مايو 2024</span>
+            </div>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+              النبات في حالة ممتازة. تم رصد نمو جديد وبراعم صحية. استمر في روتين
+              الري الحالي.
+            </p>
+            <button
+              class="w-full bg-surface-container-highest text-on-primary-container font-bold py-3 px-6 rounded-full hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              عرض التفاصيل
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_back"
+                >arrow_back</span
+              >
+            </button>
+          </div>
+        </article>
+        <article
+          class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="unhealthy snake plant leaf with yellowing edges and brown spots against a neutral studio background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW1IJIewqpZEnitUxCjd0PwIWNuRnUAayJF0UbMKwuRjQ1WbWUZm06KFlBXWFNBdeyzOL-4otmsJObsKsA1Z53sotLT6oJYRClUXGbawQ_QUS4q6qXbAKczIXTt8Ac6gfXNaFfu_jYGYTGIbsMzKqtQMbnmUVCQM0_jPieoqc5U4XDltIVWTPBxtWajCda8YnKaT9S_-KdmsPv5pKz9kGHCHlm0r9DsotuUK_mlFPT6CsvZkVcAOLyZPcML-j5Rn1NWxw44plQVuA"
+            />
+            <div class="absolute top-4 left-4">
+              <span
+                class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span
+                  class="material-symbols-outlined text-xs"
+                  data-icon="warning"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >warning</span
+                >
+                يحتاج اهتمام
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-on-surface">نبات الثعبان</h3>
+              <span class="text-xs text-outline font-medium">08 مايو 2024</span>
+            </div>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+              تم رصد علامات ري مفرط. الأوراق تظهر اصفراراً طفيفاً عند القاعدة.
+              قلل وتيرة الري فوراً.
+            </p>
+            <button
+              class="w-full bg-surface-container-highest text-on-primary-container font-bold py-3 px-6 rounded-full hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              عرض التفاصيل
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_back"
+                >arrow_back</span
+              >
+            </button>
+          </div>
+        </article>
+        <article
+          class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="lush fiddle leaf fig in a terracotta pot with large glossy violin shaped leaves in a bright minimalist room"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqC1WXJaUSmz3J8GDwlHH81hzlYTidkdB5EqkJLPH2LB4ntF5Me4rFg2p938Ynp6TO_ZcrWl8hyZkbefTL9hqCOcq1K5mjiordwTxZnblWR2_yDR7Vd9slLKW1LCF7QtAkDxqMsTEgeco4uidIDZWCAm0ej1hLXxj-rFOi_6mjD7UsBx8PE1WebNRuFX4lJ53AXlbI5qqPv3ADDfHbQyL0CzX5Mc0nLerG1LCS3GueMFApWBQbLvE7XA3ZUuMbw9Z3JUqHfOnsFVA"
+            />
+            <div class="absolute top-4 left-4">
+              <span
+                class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span
+                  class="material-symbols-outlined text-xs"
+                  data-icon="check_circle"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >check_circle</span
+                >
+                سليم
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-on-surface">تين بنجاميني</h3>
+              <span class="text-xs text-outline font-medium">01 مايو 2024</span>
+            </div>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+              مستويات الضوء مثالية. لا توجد آفات مرئية. استمر في تنظيف الأوراق
+              من الغبار أسبوعياً.
+            </p>
+            <button
+              class="w-full bg-surface-container-highest text-on-primary-container font-bold py-3 px-6 rounded-full hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              عرض التفاصيل
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_back"
+                >arrow_back</span
+              >
+            </button>
+          </div>
+        </article>
+        <article
+          class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="close up of small olive tree leaves showing early signs of fungal spots with moody natural lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVruMJK3HaaYX6j8ZUtJ7AHG3i_mFY80M6fLSrvmssdIISVFcdLGCE1dpXIYSV86L9bvqP9groc_US9JRLA8sYmXDQlJ35gFc56mKNhZijYK5ykjqZKDkyprOsN0B8oKbTRq83PaIgRoJOln55n7Jq08kxFtp2CgMsu-MGqaB3gKyXN3uHqq8KMUzBKDNoSF11G9KUHcysSSumAEBL6O1dr7hOm0nQ2h1PBuxVj66Ww_wm3FxAdfmZgSm0FRjbmpFp_Xp_u_Axq-A"
+            />
+            <div class="absolute top-4 left-4">
+              <span
+                class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span
+                  class="material-symbols-outlined text-xs"
+                  data-icon="error"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >error</span
+                >
+                في خطر
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-on-surface">شجرة زيتون</h3>
+              <span class="text-xs text-outline font-medium"
+                >25 أبريل 2024</span
+              >
+            </div>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+              تم رصد عدوى فطرية متقدمة. يرجى عزل النبات فوراً واستخدام المبيدات
+              الموصى بها.
+            </p>
+            <button
+              class="w-full bg-surface-container-highest text-on-primary-container font-bold py-3 px-6 rounded-full hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              عرض التفاصيل
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_back"
+                >arrow_back</span
+              >
+            </button>
+          </div>
+        </article>
+      </section>
+      <div class="mt-16 flex justify-center">
+        <button
+          class="bg-primary text-on-primary font-bold py-4 px-10 rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95"
+        >
+          تحميل المزيد من النتائج
+        </button>
+      </div>
+    </main>
+    <footer class="w-full mt-auto bg-emerald-100/30 dark:bg-emerald-950/20">
+      <div
+        class="flex flex-row-reverse justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col items-end gap-2">
+          <span class="text-lg font-bold text-emerald-900 brand-font"
+            >AI Plant Doctor</span
+          >
+          <span
+            class="font-['Be_Vietnam_Pro'] text-xs text-emerald-900/50 dark:text-emerald-100/50"
+            >© 2024 The Botanical Atelier. AI Diagnostic Precision.</span
+          >
+        </div>
+        <div class="flex gap-6 font-['Be_Vietnam_Pro'] text-xs">
+          <a
+            class="text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all"
+            href="#"
+            >Privacy</a
+          >
+          <a
+            class="text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all"
+            href="#"
+            >Terms</a
+          >
+          <a
+            class="text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all"
+            href="#"
+            >Support</a
+          >
+          <a
+            class="text-emerald-900/50 dark:text-emerald-100/50 hover:text-emerald-600 underline-offset-4 hover:underline transition-all"
+            href="#"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

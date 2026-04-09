@@ -1,0 +1,26 @@
+/* هذا الملف الآن نظيف ولا يحتوي على أي كود جافا سكريبت */
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #f4fbf4;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* تنسيق أيقونات جوجل */
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+/* منع ظهور الخطوط الزرقاء عند الضغط المطول في الموبايل */
+input:focus {
+    outline: none;
+}

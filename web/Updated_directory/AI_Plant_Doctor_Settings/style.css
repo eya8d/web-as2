@@ -1,0 +1,21 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #f4fbf4;
+}
+
+h1,
+h2,
+h3,
+.brand-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+input:focus {
+    outline: none !important;
+}
