@@ -1,26 +1,36 @@
-/* هذا الملف الآن نظيف ولا يحتوي على أي كود جافا سكريبت */
-
+/* Reusable Global Styles */
 body {
-    font-family: "Be Vietnam Pro", sans-serif;
-    background-color: #f4fbf4;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Plus Jakarta Sans", sans-serif;
+/* Nav Links */
+.nav-link {
+    @apply text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors font-medium;
 }
 
-/* تنسيق أيقونات جوجل */
+/* Buttons */
+.btn-primary {
+    @apply flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-eight font-bold text-lg transition-all hover:brightness-110 hover:shadow-lg;
+}
+
+/* Icons */
 .material-symbols-outlined {
-    font-variation-settings:
-        "FILL" 0,
-        "wght" 400,
-        "GRAD" 0,
-        "opsz" 24;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
 }
 
-/* منع ظهور الخطوط الزرقاء عند الضغط المطول في الموبايل */
+/* Inputs Reset */
 input:focus {
-    outline: none;
+    outline: none !important;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* تعديل الـ Input في الدارك مود لضمان الوضوح */
+.dark input::placeholder {
+    color: #4B5563; /* gray-600 */
 }
