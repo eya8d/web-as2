@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title
+      data-en="Diagnosis History | PlantDoctor AI"
+      data-ar="سجل التشخيص | طبيب النبات"
+    >
+      Diagnosis History | PlantDoctor AI
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "#2D5A27",
+                light: "#E9F5E6",
+                soft: "#F3FAF2",
+                accent: "#4A7C44",
+              },
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              arabic: ['"Cairo"', "sans-serif"],
+            },
+            borderRadius: { eight: "8px" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#F8FAF7] dark:bg-[#0F170D] text-gray-800 dark:text-gray-100 antialiased min-h-screen flex flex-col transition-colors duration-300"
+  >
+    <header
+      class="sticky top-0 z-50 bg-white/80 dark:bg-[#0F170D]/80 backdrop-blur-md border-b border-primary-light dark:border-gray-800"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-3xl">🌿</span>
+          <h1 class="text-2xl font-bold text-primary dark:text-white">
+            PlantDoctor
+          </h1>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="nav-link"
+            href="../AI_Plant_Doctor_Home/index.html"
+            data-en="Home"
+            data-ar="الرئيسية"
+            >Home</a
+          >
+          <a
+            class="text-primary dark:text-white font-bold border-b-2 border-primary pb-1"
+            href="../AI_Plant_Doctor_History/index.html"
+            data-en="History"
+            data-ar="السجل"
+            >History</a
+          >
+          <a
+            class="nav-link"
+            href="../AI_Plant_Doctor_Settings/index.html"
+            data-en="Settings"
+            data-ar="الإعدادات"
+            >Settings</a
+          >
+          <a
+            class="nav-link"
+            href="../AI_Plant_Doctor_Login/index.html"
+            data-en="Login"
+            data-ar="دخول"
+            >Login</a
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button
+            id="lang-toggle"
+            class="p-2 px-3 rounded-full hover:bg-primary-soft dark:hover:bg-gray-800 text-primary dark:text-white font-bold transition-all border border-primary/20"
+          >
+            AR
+          </button>
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-full hover:bg-primary-soft dark:hover:bg-gray-800 text-primary dark:text-yellow-400 transition-all"
+          >
+            <svg
+              id="theme-toggle-dark-icon"
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon"
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+      <section class="mb-10 rtl:text-right">
+        <h2
+          class="text-4xl font-extrabold text-primary dark:text-white tracking-tight mb-3"
+          data-en="Diagnosis History"
+          data-ar="سجل التشخيصات"
+        >
+          Diagnosis History
+        </h2>
+        <p
+          class="text-gray-500 dark:text-gray-400 text-lg"
+          data-en="Track your plants' growth and health journey through our AI archives."
+          data-ar="تتبع نمو نباتاتك ورحلتها الصحية من خلال أرشيف الذكاء الاصطناعي الخاص بنا."
+        >
+          Track your plants' growth and health journey through our AI archives.
+        </p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-10">
+        <div
+          class="md:col-span-6 lg:col-span-7 bg-white dark:bg-gray-800 rounded-eight border border-primary-light dark:border-gray-700 p-2 flex items-center gap-3 transition-colors"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 pl-2 rtl:pr-2 rtl:pl-0"
+            >search</span
+          >
+          <input
+            type="text"
+            placeholder="Search..."
+            data-en-placeholder="Search for a plant or disease..."
+            data-ar-placeholder="ابحث عن نبات أو مرض..."
+            class="bg-transparent border-none focus:ring-0 w-full text-sm dark:text-white"
+          />
+        </div>
+        <div
+          class="md:col-span-3 lg:col-span-2 bg-white dark:bg-gray-800 rounded-eight border border-primary-light dark:border-gray-700 p-2 flex items-center transition-colors"
+        >
+          <span class="material-symbols-outlined text-gray-400 px-2"
+            >calendar_month</span
+          >
+          <select
+            class="bg-transparent border-none focus:ring-0 w-full text-sm cursor-pointer dark:text-white"
+          >
+            <option
+              class="dark:bg-gray-800"
+              data-en="All Time"
+              data-ar="كل الأوقات"
+            >
+              All Time
+            </option>
+            <option
+              class="dark:bg-gray-800"
+              data-en="Last Week"
+              data-ar="الأسبوع الماضي"
+            >
+              Last Week
+            </option>
+          </select>
+        </div>
+        <div
+          class="md:col-span-3 lg:col-span-3 bg-white dark:bg-gray-800 rounded-eight border border-primary-light dark:border-gray-700 p-2 flex items-center transition-colors"
+        >
+          <span class="material-symbols-outlined text-gray-400 px-2"
+            >filter_list</span
+          >
+          <select
+            class="bg-transparent border-none focus:ring-0 w-full text-sm cursor-pointer dark:text-white"
+          >
+            <option
+              class="dark:bg-gray-800"
+              data-en="Status: All"
+              data-ar="الحالة: الكل"
+            >
+              Status: All
+            </option>
+            <option class="dark:bg-gray-800" data-en="Healthy" data-ar="سليم">
+              Healthy
+            </option>
+            <option class="dark:bg-gray-800" data-en="At Risk" data-ar="في خطر">
+              At Risk
+            </option>
+          </select>
+        </div>
+      </section>
+
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rtl:text-right"
+      >
+        <article
+          class="card overflow-hidden group dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="relative h-52 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=1000"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              alt="Monstera"
+            />
+            <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4">
+              <span
+                class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-400 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-[14px]"
+                  >check_circle</span
+                >
+                <span data-en="Healthy" data-ar="سليم">Healthy</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-primary dark:text-white">
+                Monstera Deliciosa
+              </h3>
+              <span class="text-xs text-gray-400">May 12, 2024</span>
+            </div>
+            <p
+              class="text-gray-500 dark:text-gray-400 text-sm mb-6 leading-relaxed"
+              data-en="Plant is in excellent condition. New growth detected."
+              data-ar="النبات في حالة ممتازة. تم اكتشاف نمو جديد."
+            >
+              Plant is in excellent condition. New growth detected.
+            </p>
+            <button
+              class="w-full bg-primary-soft dark:bg-primary/20 text-primary dark:text-green-400 font-bold py-3 rounded-eight hover:bg-primary dark:hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+            >
+              <span data-en="View Details" data-ar="عرض التفاصيل"
+                >View Details</span
+              >
+              <span class="material-symbols-outlined text-sm rtl:rotate-180"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="card overflow-hidden group dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="relative h-52 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=1000"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              alt="Snake Plant"
+            />
+            <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4">
+              <span
+                class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-400 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-[14px]"
+                  >warning</span
+                >
+                <span data-en="Attention" data-ar="انتباه">Attention</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-primary dark:text-white">
+                Snake Plant
+              </h3>
+              <span class="text-xs text-gray-400">May 08, 2024</span>
+            </div>
+            <p
+              class="text-gray-500 dark:text-gray-400 text-sm mb-6 leading-relaxed"
+              data-en="Signs of over-watering detected at the base."
+              data-ar="تم اكتشاف علامات ري زائد عند القاعدة."
+            >
+              Signs of over-watering detected at the base.
+            </p>
+            <button
+              class="w-full bg-primary-soft dark:bg-primary/20 text-primary dark:text-green-400 font-bold py-3 rounded-eight hover:bg-primary dark:hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+            >
+              <span data-en="View Details" data-ar="عرض التفاصيل"
+                >View Details</span
+              >
+              <span class="material-symbols-outlined text-sm rtl:rotate-180"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="card overflow-hidden group dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="relative h-52 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=1000"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              alt="Olive Tree"
+            />
+            <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4">
+              <span
+                class="bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-400 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-[14px]">error</span>
+                <span data-en="At Risk" data-ar="في خطر">At Risk</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-primary dark:text-white">
+                Olive Tree
+              </h3>
+              <span class="text-xs text-gray-400">Apr 25, 2024</span>
+            </div>
+            <p
+              class="text-gray-500 dark:text-gray-400 text-sm mb-6 leading-relaxed"
+              data-en="Advanced fungal infection detected. Isolate plant."
+              data-ar="تم اكتشاف عدوى فطرية متقدمة. اعزل النبات فوراً."
+            >
+              Advanced fungal infection detected. Isolate plant.
+            </p>
+            <button
+              class="w-full bg-primary-soft dark:bg-primary/20 text-primary dark:text-green-400 font-bold py-3 rounded-eight hover:bg-primary dark:hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+            >
+              <span data-en="View Details" data-ar="عرض التفاصيل"
+                >View Details</span
+              >
+              <span class="material-symbols-outlined text-sm rtl:rotate-180"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <div class="mt-16 flex justify-center">
+        <button
+          class="bg-primary dark:bg-green-700 text-white font-bold py-4 px-10 rounded-eight shadow-lg hover:scale-105 transition-transform active:scale-95"
+          data-en="Load More Results"
+          data-ar="تحميل المزيد"
+        >
+          Load More Results
+        </button>
+      </div>
+    </main>
+
+    <footer
+      class="bg-white dark:bg-[#0F170D] border-t border-primary-light dark:border-gray-800 py-8 mt-12 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p
+          class="text-gray-400 text-xs"
+          data-en="© 2026 The Botanical Atelier. Precise Diagnostics."
+          data-ar="© 2026 المرسم النباتي. تشخيص دقيق."
+        >
+          © 2026 The Botanical Atelier. Precise Diagnostics.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // --- Dark Mode Logic ---
+      var themeToggleDarkIcon = document.getElementById(
+        "theme-toggle-dark-icon",
+      );
+      var themeToggleLightIcon = document.getElementById(
+        "theme-toggle-light-icon",
+      );
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        themeToggleDarkIcon.classList.remove("hidden");
+      } else {
+        document.documentElement.classList.remove("dark");
+        themeToggleLightIcon.classList.remove("hidden");
+      }
+      document
+        .getElementById("theme-toggle")
+        .addEventListener("click", function () {
+          themeToggleDarkIcon.classList.toggle("hidden");
+          themeToggleLightIcon.classList.toggle("hidden");
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          }
+        });
+
+      // --- Multi-Language Logic ---
+      const langToggleBtn = document.getElementById("lang-toggle");
+      const translatableElements = document.querySelectorAll("[data-en]");
+      function updateLanguage(lang) {
+        const isAr = lang === "ar";
+        document.documentElement.dir = isAr ? "rtl" : "ltr";
+        document.documentElement.lang = lang;
+        translatableElements.forEach((el) => {
+          el.textContent = el.getAttribute(`data-${lang}`);
+        });
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach((input) => {
+          const placeholder = input.getAttribute(`data-${lang}-placeholder`);
+          if (placeholder) input.placeholder = placeholder;
+        });
+        langToggleBtn.textContent = isAr ? "EN" : "AR";
+        localStorage.setItem("preferred-lang", lang);
+        document.body.style.fontFamily = isAr
+          ? "'Cairo', sans-serif"
+          : "'Plus Jakarta Sans', sans-serif";
+      }
+      const savedLang = localStorage.getItem("preferred-lang") || "en";
+      updateLanguage(savedLang);
+      langToggleBtn.addEventListener("click", () => {
+        const currentLang = document.documentElement.lang;
+        updateLanguage(currentLang === "en" ? "ar" : "en");
+      });
+    </script>
+  </body>
+</html>

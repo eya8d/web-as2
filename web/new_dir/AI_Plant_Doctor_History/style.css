@@ -1,0 +1,98 @@
+/* Global Reset & Transitions */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Arabic Font Support */
+[lang="ar"] body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(45, 90, 39, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(45, 90, 39, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(45, 90, 39, 0.1);
+}
+
+/* Nav Links */
+.nav-link {
+    color: #6B7280;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2D5A27;
+}
+
+.dark .nav-link {
+    color: #9CA3AF;
+}
+
+.dark .nav-link:hover {
+    color: white;
+}
+
+/* Icons */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+/* Form Styling */
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Adjust select for RTL */
+[dir="rtl"] select {
+    background-position: left 0.5rem center;
+    padding-right: 1rem;
+    padding-left: 2.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3FAF2;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0D120B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2D5A27;
+    border-radius: 10px;
+}
+
+/* RTL Alignment Helpers */
+[dir="rtl"] .rtl\:text-right {
+    text-align: right;
+}
+
+[dir="rtl"] .rtl\:left-auto {
+    left: auto;
+}
+
+[dir="rtl"] .rtl\:rotate-180 {
+    transform: rotate(180deg);
+}
